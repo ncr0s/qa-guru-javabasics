@@ -10,12 +10,12 @@ public class Main {
         // целочисленные
         byte varByte = 100; // -128 ... 127  (-2 ^ 7 ... (2 ^ 7) -1)
         short varShort = 1000; // -321768  ... 321767
-        int varInt = 100_000_000;
-        long varLong = 0L;
+        int varInt = 1;
+        long varLong = -1L;
         // символ (под капотом тоже число)
         char varChar = 'f';
         //  числа с плавающей точкой
-        float varFloat = 0.0F;
+        float varFloat = 1.01F;
         double varDouble0 = 36.0;
         String varString0 = "Selenide";
         String varString1 = "Selenide";
@@ -55,6 +55,68 @@ public class Main {
             default: {
                 System.out.println("Ничего не подошло");
             }
+        }
+
+        byte varByte0 = -65;
+        short varShort0 = 32765;
+        int varInt0 = 1073741824;
+        long varLong0 = -2147483648L;
+
+        float varFloat0 = 13.12F;
+        double varDouble = 0.892469310453633;
+
+        System.out.println(String.format("Integer overflow example: %d * 2 = %d", varInt0, varInt0 * 2));
+        System.out.println(String.format("Byte overflow example: %d * 2 = %d", varByte0, (byte) (varByte0 * 2)));
+
+        System.out.println("Enter math operator");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        switch (str) {
+            case "+": {
+                System.out.println((byte) (varByte + varByte0));
+                System.out.println(varShort + varShort0);
+                System.out.println(varInt + varInt0);
+                System.out.println(varLong + varLong0);
+                System.out.println(varFloat + varFloat0);
+                System.out.println(varDouble + varDouble0);
+                break;
+            }
+            case "-": {
+                System.out.println((byte) (varByte - varByte0));
+                System.out.println(varShort - varShort0);
+                System.out.println(varInt - varInt0);
+                System.out.println(varLong - varLong0);
+                System.out.println(varFloat - varFloat0);
+                System.out.println(varDouble - varDouble0);
+                break;
+            }
+            case "*": {
+                System.out.println((byte) (varByte * varByte0));
+                System.out.println(varShort * varShort0);
+                System.out.println(varInt * varInt0);
+                System.out.println(varLong * varLong0);
+                System.out.println(varFloat * varFloat0);
+                System.out.println(varDouble * varDouble0);
+                break;
+            }
+            case "/": {
+                System.out.println(varByte > varByte0 ? (byte) (varByte / varByte0) : (byte) (varByte0 / varByte));
+                System.out.println(varShort > varShort0 ? varShort / varShort0 : varShort0 / varShort);
+                System.out.println(varInt > varInt0 ? varInt / varInt0 : varInt0 / varInt);
+                System.out.println(varLong > varLong0 ? varLong / varLong0 : varLong0 / varLong);
+                System.out.println(varFloat / varFloat0);
+                System.out.println(varDouble / varDouble0);
+                break;
+            }
+            case "%": {
+                System.out.println(varByte % varByte0);
+                System.out.println(varShort % varShort0);
+                System.out.println(varInt % varInt0);
+                System.out.println(varLong % varLong0);
+                break;
+            }
+            default:
+                System.out.println("Unsupported operation type");
         }
 
         String[] arrayStr = new String[] {"Dima", "Vasya"};
@@ -116,8 +178,6 @@ public class Main {
                 System.out.println("Нашли Петра: " + entry.getValue().getName());
             }
         }
-
-
     }
 
 
