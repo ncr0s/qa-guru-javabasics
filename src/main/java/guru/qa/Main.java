@@ -68,6 +68,9 @@ public class Main {
         System.out.println(String.format("Integer overflow example: %d * 2 = %d", varInt0, varInt0 * 2));
         System.out.println(String.format("Byte overflow example: %d * 2 = %d", varByte0, (byte) (varByte0 * 2)));
 
+        System.out.println("Int + Double example: " + (varInt + varDouble));
+        System.out.println("Int / Double example: " + (varInt / varDouble));
+
         System.out.println("Enter math operator");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
