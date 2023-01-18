@@ -23,7 +23,7 @@ public class Main {
         int coinNominal = 3;
         String coinCurrency = "RUB";
 
-        // Операторы
+        // Operators
         // Операторы математические
         int result = 10;
         result = result + 1;
@@ -38,7 +38,7 @@ public class Main {
         if (coinCurrency.equals("RUB")) {
             System.out.println("Это рубль!");
         } else if (coinCurrency.equals("USD")) {
-            System.out.println("Это долар!");
+            System.out.println("Это доллар!");
         } else {
             System.out.println("Ничего не подошло");
         }
@@ -49,7 +49,7 @@ public class Main {
                 break;
             }
             case "USD": {
-                System.out.println("Это долар!");
+                System.out.println("Это доллар!");
                 break;
             }
             default: {
@@ -123,6 +123,7 @@ public class Main {
         }
 
         String[] arrayStr = new String[] {"Dima", "Vasya"};
+        String[] arrayStr = new String[] {"Dima", "Vasa"};
 
         int[] array = {100, 150 , -1, 90, 80, 345, 43534};
 
