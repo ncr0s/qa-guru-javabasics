@@ -27,7 +27,7 @@ public class Main {
         // Операторы математические
         int result = 10;
         result = result + 1;
-        result +=  1;
+        result += 1;
         result = ++result;
 
         // Операторы сравнения
@@ -122,10 +122,9 @@ public class Main {
                 System.out.println("Unsupported operation type");
         }
 
-        String[] arrayStr = new String[] {"Dima", "Vasya"};
-        String[] arrayStr = new String[] {"Dima", "Vasa"};
+        String[] arrayStr = new String[]{"Dima", "Vasya"};
 
-        int[] array = {100, 150 , -1, 90, 80, 345, 43534};
+        int[] array = {100, 150, -1, 90, 80, 345, 43534};
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] != -1) {
@@ -136,7 +135,7 @@ public class Main {
             break;
         }
 
-        for (int i = array.length - 1;  i >= 0  ; i--) {
+        for (int i = array.length - 1; i >= 0; i--) {
             System.out.println(array[i]);
         }
 
@@ -160,7 +159,7 @@ public class Main {
             System.out.println(var);
         }
 
-        for (int i = stringList.size() - 1;  i >= 0  ; i--) {
+        for (int i = stringList.size() - 1; i >= 0; i--) {
             System.out.println(stringList.get(i));
         }
 
@@ -186,6 +185,6 @@ public class Main {
 
 
     public static String someMethod(String... args) {
-        return "" ;
+        return "";
     }
 }
